@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        font-size: 1rem;
+      }
+      h1{
+        background: yellow;
+      }
+
+      .smily {
+        display: inline-block;
+        list-style: none;
+      }
+      .smily img{
+        width: 100px
+      }
+
+      .ichcap-link{
+        color: red;
+      }
+
+      .special{
+        background: pink;
+      }
+    </style>
+    <script type="text/javascript">
+
+    </script>
+  </head>
+  <body>
+    <h1 id="main-title">Create : html 콘텐츠 생성하기, createElement, .innerHTML, .appendChild</h1>
+    <ul class='smily-mom'>
+      <li class="smily"><img src='C:\Users\ss\Desktop\web\smile1.png'><a class='ichcap-link' href="https://www.unesc-ichcap.org">Unesco-Ichcap</a> </li>
+      <li class="smily"><img src='C:\Users\ss\Desktop\web\smile2.png'></li>
+      <li class="smily"><img src='C:\Users\ss\Desktop\web\SG_ich.jpeg'></li>
+    </ul>
+  <script type="text/javascript">
+      var listElem = document.createElement('li');  // .createElement('') 사용하여 li 엘리먼트 만들기
+      listElem.innerHTML = '<span>unescicm</span>'  // .innerHTML 객체로 <span> 태그가 들어 있는  <li> 태그 생성
+      var smilyMom = document.querySelector('.smily-mom');  // 생성된 <li> 엘리먼트가 들어갈 자리를 부모엘리먼트(.querySelector('') 함수 사용)를 담은 변수 만든 후
+      smilyMom.appendChild(listElem);               // .appendChild() 메소드 사용하여 부모객체 아래로 위치 확정
+      console.log(listElem);
+  </script>
+  </body>
+</html>

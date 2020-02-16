@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        font-size: 1rem;
+      }
+      h1{
+        background: yellow;
+      }
+
+      .smily {
+        display: inline-block;
+        list-style: none;
+      }
+      .smily img{
+        width: 100px
+      }
+    </style>
+    <script type="text/javascript">
+
+    </script>
+  </head>
+  <body>
+    <h1 id="main-title">Attribute: 속성 다루기, getAttribute(' '), setAttribute('', '')</h1>
+    <ul>
+      <li class="smily"><img src='C:\Users\ss\Desktop\web\smile1.png'><a class='ichcap-link' href="https://www.unesc-ichcap.org">Unesco-Ichcap</a> </li>
+      <li class="smily"><img src='C:\Users\ss\Desktop\web\smile2.png'></li>
+      <li class="smily"><img src='C:\Users\ss\Desktop\web\SG_ich.jpeg'></li>
+    </ul>
+  <script type="text/javascript">
+      var ichcap = document.querySelector('.smily a');   // 선택자 사용
+      console.log(ichcap);
+      console.log(ichcap.getAttribute('href'));        // getAttribute('') 가져오고 싶은 대상의 속성값 명기  - return 값 있음
+      console.log(ichcap.getAttribute('class'));       // 가져오거 싶은 대상의 속성값 명기
+
+      ichcap.setAttribute('href', 'http://unescoicm.org/');   // setAttribute('속성', '변경할 대상') - return 값 없음
+      console.log(ichcap.getAttribute('href'));
+
+  </script>
+  </body>
+</html>

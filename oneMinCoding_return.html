@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+       /* h1{
+        background-color: tomato
+      } */
+    </style>
+  </head>
+  <body>
+    <h1><a href="https://www.youtube.com/watch?v=vlyHEQSqkl8">JavaScript: function(), return, console.log(), document.write()</a></h1>
+    <script type="text/javascript">
+      <!-- 함수는 특정 기능을 하는 코드의 덩어리 -->
+      function sample(){
+        return;
+        <!-- return 만나면 함수 종료하고 실해안 곳으로 감..따라서 아래로 진행이 멈추기에 함수호출해도 콘솔창에 값 출력 없음 -->
+        console.log('ㅋㅋㅋ');
+      }
+      sample();
+
+       var a= 100;
+      function sample1(){
+        if(a>0){
+          return;
+        }  console.log('ㅎㅎㅎ')
+      }
+      <!-- sample1(); -->
+
+      <!-- a와 b는 sum 함수의 매개변수(parameter) -->
+      function sum(a, b){
+        <!-- console.log(a+b); -->
+        document.write(a+b);
+        <!-- return 값이 없기에 웹사이트에는 값이 나오나 콘솔창에는 안나옴 -->
+
+      }
+      <!-- sum(1, 100); -->
+      <!-- var h = sum(100, 200);
+      console.log(h)
+       -->
+      function sum2(c,d){
+        document.write(c+d);
+        return c+d;
+
+      }
+
+      <!-- sum2(100, 200); -->
+      <!-- console.log(sum2(100, 200)); -->
+      <!-- retrun 은 함수의 실행을 종료하면서 return 값을 반환하고 있음. 따라서 활용 할 수 있음  -->
+      var h = sum2(100, 500);
+      console.log(h)
+
+      // document.querySelector('h1').style.height=h+'px';
+
+      function hello(name){
+        console.log('hi! I am ' + name + 'and a member of ICHCAP');
+      }
+      <!-- hello('keum'); -->
+
+    </script>
+  </body>
+</html>

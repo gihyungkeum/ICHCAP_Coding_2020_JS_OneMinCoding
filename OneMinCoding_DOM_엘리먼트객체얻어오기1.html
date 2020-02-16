@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        font-size: 1rem;
+      }
+      h1{
+        background: yellow;
+      }
+    </style>
+    <script type="text/javascript">
+        /*
+          var title = document.getElementById('main-title');
+          console.log(title);
+
+          window.onload = function(){
+          var title = document.getElementById('main-title');
+          console.log(title);
+      };
+
+
+        window.addEventListener('load', function(){
+        var title = document.getElementById('main-title');
+        console.log(title);
+      });
+
+
+
+        window.addEventListener('DOMcontentloaded', function(){
+        var title = document.getElementById('main-title');
+        console.log(title);
+      })
+    */
+
+    </script>
+  </head>
+  <body>
+    <h1 id="main-title">
+      <span>hello 0</span>
+      <span>hello 1</span>
+      <span>hello 2</span>
+      DOM : document object model</h1>
+    # html 속성들()엘리먼트)을 즉, js의 document의 object(객체)로 다루어 조작하는 것
+    <article class="">
+      <header class="nain-header">header</header>
+      <section>
+        <header> s header </header>
+        section 1
+      </section>
+      <section>
+        <header> s header </header>
+        section 2
+      </section>
+    </article>
+  <script type="text/javascript">
+    var title = document.getElementById('main-title');
+    var titleSpan = title.getElementsByTagName('span');
+    console.log(titleSpan);
+  </script>
+  </body>
+</html>
+
+
+<br>(주석)wondow.onload = function(){}; - 자바스크립트를 head 에 넣을 경우 아래내용 다 읽을 때까지 기다린  후 실행 토록 하는 이벤트함수
+<br>(주석)현재는 onload 대신 window.addEventListener('load', function(){});을 주로사용함
+<br>(주석) 하지만 load는 이미지까지 모든 것이 로드된 후 실행 됨으로 속도가 느릴 수 있음. 따라서 window.addEventListner('DOMcontentloaded', function(){}); 사용하면 도규멘트만 로드되면 우선 실행 되므로 이미지 등이 모든 것이 로드될 때까지 기다리지 않고 우선 실행되어 속도가 빠른 것 처럼 보여줌.
+<br>(주석) 따라서 body 태그 맨 아래에 script를 쓰면 위 함수들을 쓸 필요 없음
+<br>(주석) html <!--    CSS/JS 한줄 // 여러줄  /*

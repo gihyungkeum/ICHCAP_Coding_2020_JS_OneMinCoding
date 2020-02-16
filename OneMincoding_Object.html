@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>Object: 객체: this</h2>
+    객체(eg. 사람) ; 속성과 기능
+    <script type="text/javascript">
+      var person1 = {};
+      person1.name = 'Kim ichcap';  //속성(property)
+      person1.age = 10;             //속성
+      person1.introduce = function(){
+        // console.log('hello! my name is kim and 10 years old');
+        console.log('good day! I am '+ this.name + 'and ' + this.age + ' years old' );
+        //name 과 age 변수처리를 미리 하여야 하나, name은 window 전역객체로 미리 정해 있어 에러 안 나오나(eg. username으로 쓰면 이부분도 에러 메세지 나옴) age는 그렇지 않기에 경고창이 뜸. 해결 방법으로 this.을 속성앞에 붙여줌: [this.]name 및 this.age
+
+
+      }        //메소드(method)
+
+      var person2 = {
+        name : 'Lee ',
+        age : 20,
+        introduce : function(){
+        //  console.log('good day! I am Lee, 20 yers old');
+        //console.log('good day! I am '+ name + 'and ' + age + ' years old' );
+        }
+      };
+
+
+      var person3 = {
+        name : 'park ',
+        age : 30,
+        introduce : function(){
+        console.log('good day! I am '+ this.name + 'and ' + this.age + ' years old' );
+        }
+      };
+
+
+       person1.introduce();
+      person2.introduce();   //빈객체 만든후(person1) 속성 추가하나, 객체만들면서 속성값 넣으나 동일. 이방법을 선호
+      person3.introduce();
+      // console.log(person.name);
+    </script>
+  </body>
+</html>

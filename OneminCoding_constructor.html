@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Constructor & Instance : 생성자, 인스턴스</h1>
+    <script type="text/javascript">
+      // 생성자(constructor)
+      function Person(username, age){             //생성자 함수는 첫글자 대문자로(관례)
+        this.username = username;              //이 개체의(this.) username을 username으로...
+        this.age = age;                        // this는 그게 속한 함수의 객체자체를 의미
+        this.introduce = function(){
+          console.log('how are you? I am '+ this.username+ ' my age is' + this.age +' good to see you');
+        }
+      }
+      var p1= new Person('ichcap', 10);        //인스턴스 : 생성자 함수에서 만들어진 각각의 개별객체를 지칭
+      var p2= new Person('unescoicm',3 );
+      // var p3 = new Person('apceiu', 20);
+
+      // var p10000= new Person('chrihap', 7 )
+
+
+      p1.introduce();
+      p2.introduce();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>JavaScript: 함수의 유효범위(전역, 지역)</h1>
+    <script type="text/javascript">
+      var a=100;  // 전역변수
+      // console.log(a);
+      function sample1(){
+      //  var a='sample1 내부의 300'   // 지역변수, 10번재줄 a=100보다 우선
+        var b=200;     //지역변수
+        console.log('sample1에서 출력한 '+ a);
+      //  console.log('sample1에서 출력한 '+ b);
+        function sample2(){
+          console.log(b);
+        }
+        sample2();  //sample1 에 속한 지역변수...sample1이 sample2 의 전역변수 열할 - 크로
+       }
+      sample1();
+      //console.log(b)
+      // 지역변수는 그 변수가 선언된 함수내부에서만 접근이 가능하고 생명주기도 그 함수가 호출되는 순간 없어짐
+      // 지역변수와 전역번수간 우선순위는 지역변수가 먼저 *참조 ES6 let,const {블럭단위}
+      // 전역변수 최소화가 필요. 해결방법의 하나로 객체생성 필요
+    </script>
+  </body>
+</html>

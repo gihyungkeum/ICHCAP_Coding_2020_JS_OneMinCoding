@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        font-size: 1rem;
+      }
+      h1{
+        background: yellow;
+      }
+
+      .smily {
+        display: inline-block;
+        list-style: none;
+      }
+      .smily img{
+        width: 100px
+      }
+    </style>
+    <script type="text/javascript">
+        /*
+          var title = document.getElementById('main-title');
+          console.log(title);
+
+          window.onload = function(){
+          var title = document.getElementById('main-title');
+          console.log(title);
+      };
+
+
+        window.addEventListener('load', function(){
+        var title = document.getElementById('main-title');
+        console.log(title);
+      });
+
+
+
+        window.addEventListener('DOMcontentloaded', function(){
+        var title = document.getElementById('main-title');
+        console.log(title);
+      })
+    */
+
+    </script>
+  </head>
+  <body>
+    <h1 id="main-title">
+      DOM : document object model-객체얻어오기 2</h1>
+    <ul>
+      <li class="smily"><img src='C:\Users\ss\Desktop\web\smile1.png'></li>
+      <li class="smily"><img src='C:\Users\ss\Desktop\web\smile2.png'></li>
+      <li class="smily"><img src='C:\Users\ss\Desktop\web\SG_ich.jpeg'></li>
+    </ul>
+  <script type="text/javascript">
+  //  var mainTitle=document.querySelector('#main-title');
+  //  console.log(mainTitle);
+
+//  var smily = document.querySelector('.smily');
+  var smily = document.querySelectorAll('.smily');
+//  console.log(smily);
+//  console.log(smily[1]);
+
+// 반복문으로 smily에 border를 만들어 두고, 모두 가져오기
+  for (var i=0; i<smily.length; i++){
+    smily[i].style.border = '1px solid red';
+  }
+  </script>
+  </body>
+</html>
+
+
+<br>(주석)wondow.onload = function(){}; - 자바스크립트를 head 에 넣을 경우 아래내용 다 읽을 때까지 기다린  후 실행 토록 하는 이벤트함수
+<br>(주석)현재는 onload 대신 window.addEventListener('load', function(){});을 주로사용함
+<br>(주석) 하지만 load는 이미지까지 모든 것이 로드된 후 실행 됨으로 속도가 느릴 수 있음. 따라서 window.addEventListner('DOMcontentloaded', function(){}); 사용하면 도규멘트만 로드되면 우선 실행 되므로 이미지 등이 모든 것이 로드될 때까지 기다리지 않고 우선 실행되어 속도가 빠른 것 처럼 보여줌.
+<br>(주석) 따라서 body 태그 맨 아래에 script를 쓰면 위 함수들을 쓸 필요 없음
+<br>(주석) html <!--  -->  CSS/JS 한줄 // 여러줄  /* */
+
+<br><br>
+
+# DOM_엘리먼트객체얻어오기1을 넘어..결론적으로 script 테그를 body 맨 아래에 쓰고, decument.querySelector(' ')로 css 선택자를 활용하여 사용이 가장 편리하고 강력 (바닐라js 기법). 단 여러가지 중 첫번째 것 만 가져옴
+<br> 모두 가져오기는 document.querySelectorAll('');  그 중 특정의 것을 가죠오려면(유사배열 특성을 활용)  console.log[1]

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        font-size: 1rem;
+      }
+      h1{
+        background: yellow;
+      }
+
+      .smily {
+        display: inline-block;
+        list-style: none;
+      }
+      .smily img{
+        width: 100px
+      }
+
+      .ichcap-link{
+        color: red;
+      }
+
+      .special{
+        background: pink;
+      }
+    </style>
+    <script type="text/javascript">
+
+    </script>
+  </head>
+  <body>
+    <h1 id="main-title">Event: L</h1>
+    <ul class='smily-mom'>
+      <li class="smily"><img src='C:\Users\ss\Desktop\web\smile1.png'><a class='ichcap-link' href="https://www.unesc-ichcap.org">Unesco-Ichcap</a> </li>
+      <li class="smily"><img src='C:\Users\ss\Desktop\web\smile2.png'></li>
+      <li class="smily"><img src='C:\Users\ss\Desktop\web\SG_ich.jpeg'></li>
+    </ul>
+
+    <button class='btn' type="button" name="button">클릭하세요!</button>
+  <script type="text/javascript">
+     var btn = document.querySelector('.btn');
+     var mainTitle = document.querySelector('#main-title');
+
+     function btnClickHandler(){
+      mainTitle.style.background = '#5b92e5' // JS에서 .style 객체이용하여 직접 css 값을 조작. '#5b92e5' || rgb(91, 146, 229) || 유엔블루(softblue)
+     }
+     btn.onclick = btnClickHandler;
+  //   btn.addEventListener('click', btnClickHandler);  //이벤트를 발생할 대상(btn)에다가 .addEventListener 메소드를 연결한 후, 첫번째 매개변수의 인자로 이벤트 이름('click') 및 두번째 인자로 실행될 함수를 넣음
+                                                    // script에서 직접 css를 조작하면 인라 형식으로 들어감
+  </script>
+  </body>
+</html>
